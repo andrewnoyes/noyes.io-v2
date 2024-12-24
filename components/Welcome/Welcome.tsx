@@ -1,4 +1,5 @@
-import { Anchor, Text, Title } from '@mantine/core';
+import { Flex, Text, Title } from '@mantine/core';
+import MDXContent from '../mdx-test.mdx';
 import classes from './Welcome.module.css';
 
 export function Welcome() {
@@ -10,14 +11,9 @@ export function Welcome() {
           Mantine
         </Text>
       </Title>
-      <Text color="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
-        This starter Next.js project includes a minimal setup for server side rendering, if you want
-        to learn more on Mantine + Next.js integration follow{' '}
-        <Anchor href="https://mantine.dev/guides/next/" size="lg">
-          this guide
-        </Anchor>
-        . To get started edit index.tsx file.
-      </Text>
+      <Flex align="center" m="auto">
+        <MDXContent />
+      </Flex>
     </>
   );
 }
